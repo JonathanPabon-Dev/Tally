@@ -1,49 +1,16 @@
-# 📊 Tally | Daily financial tracking App
+# React + Vite
 
-**Tally** is a professional, mobile-first web application designed for precise purchase logging. It allows users to track shopping sessions by calculating net prices, quantities, and specific discounts with surgical accuracy. Built with a **Master-Detail** architecture, it provides a clean, fast, and distraction-free user experience.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## ✨ Key Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-* **Master-Detail Record:** Group multiple products into a single "Purchase Session" categorized by date and description.
-* **Dynamic Calculation:** Real-time calculation of item subtotals (net - discount) and the overall purchase grand total.
-* **Mobile-First Design:** A minimalist interface optimized for one-handed use, featuring a professional **Midnight Blue** and **Emerald Green** palette.
-* **Audit History:** A dedicated dashboard to review and audit previous shopping trips and itemized details.
-* **Serverless Persistence:** Direct integration with Supabase for secure, real-time data management without a dedicated Express backend.
+## React Compiler
 
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🛠️ Tech Stack
+## Expanding the ESLint configuration
 
-* **Frontend:** [React.js](https://reactjs.org/) + [Vite](https://vitejs.dev/) (JSX)
-* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-* **Database:** [Supabase](https://supabase.com/) (PostgreSQL)
-* **State Management:** React Hooks (`useState`, `useEffect`)
-
----
-
-## 🗄️ Database Schema
-
-The project utilizes two main PostgreSQL tables to maintain relational integrity:
-
-### `purchase_master`
-| Column | Type | Description |
-| :--- | :--- | :--- |
-| `id` | UUID | Primary Key |
-| `created_at` | timestamptz | Recoord creation |
-| `purchase_date` | Date | Date of the transaction |
-| `description` | Text | Name or category of the purchase |
-| `total_amount` | Numeric | Final sum of the entire session |
-| `user_id` | UUID | User property record |
-
-### `purchase_items`
-| Column | Type | Description |
-| :--- | :--- | :--- |
-| `id` | UUID | Primary Key |
-| `master_id` | UUID | Foreign Key (purchase_master) |
-| `product_name` | Text | Name of the specific item |
-| `net_price` | Numeric | Unit base price |
-| `quantity` | Integer | Units purchased |
-| `discount_perc` | Numeric | Applied discount % |
-| `subtotal` | Numeric | Calculated item total |
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
