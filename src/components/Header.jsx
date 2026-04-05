@@ -24,7 +24,7 @@ const Header = () => {
       <header className="flex bg-slate-800 px-4 py-2 text-white">
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex size-6 items-center gap-2">
-            <img src="../../public/bolsa.png" />
+            <img src="bolsa.png" />
             <div className="text-xs font-bold uppercase">Tally</div>
           </div>
           <div className="flex items-center gap-5">
