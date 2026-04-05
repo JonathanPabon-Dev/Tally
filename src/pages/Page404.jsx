@@ -7,7 +7,7 @@ const Page404 = () => {
       <h1 className="text-center text-5xl font-bold uppercase">
         Page not found
       </h1>
-      <div className="w-[80%] max-w-[500px]">
+      <div className="w-[80%] max-w-125">
         <Img404 />
       </div>
       <h3>
