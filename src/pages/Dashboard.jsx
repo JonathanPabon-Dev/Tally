@@ -16,7 +16,6 @@ const Dashboard = () => {
       .select("*")
       .order("created_at", { ascending: false });
     setPurchases(data || []);
-    console.log(data);
   };
 
   const handleViewDetail = async (purchase) => {
@@ -124,7 +123,6 @@ const Dashboard = () => {
   };
 
   const handleDeletePurchase = async (id) => {
-    console.log("id:", id);
     const { error } = await supabase
       .from("purchase_master")
       .delete()

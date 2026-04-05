@@ -62,11 +62,11 @@ const PurchaseDetail = ({
   return (
     <div className="animate-in slide-in-from-right flex flex-col duration-300">
       {/* Header Estilo Midnight Blue */}
-      <header className="rounded-xl p-4 text-white">
+      <header className="rounded-xl p-4">
         <div className="mb-4 flex items-center justify-between">
           <button
             onClick={isEditing ? () => setIsEditing(false) : onBack}
-            className="flex h-full cursor-pointer items-center rounded-xl border border-white p-2 text-sm opacity-50 hover:opacity-100"
+            className="flex h-full cursor-pointer items-center rounded-xl border border-inherit p-2 text-sm opacity-50 hover:opacity-100"
           >
             <svg
               className="size-5"
@@ -149,7 +149,7 @@ const PurchaseDetail = ({
             <input
               type="text"
               placeholder="Purchase Name"
-              className="w-full border-b border-slate-200 py-2 text-sm font-bold text-slate-500 uppercase transition-colors outline-none focus:border-indigo-500"
+              className="w-full border-b border-inherit py-2 text-sm font-bold text-slate-500 uppercase transition-colors outline-none focus:border-indigo-500"
               value={description}
               maxLength={20}
               onChange={(e) => setDescription(e.target.value.toUpperCase())}
