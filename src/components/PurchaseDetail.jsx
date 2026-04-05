@@ -81,7 +81,7 @@ const PurchaseDetail = ({
             </svg>
             {isEditing ? "Cancel" : "Back to History"}
           </button>
-          {isEditing && editableItems.length > 0 && (
+          {showEditor && editableItems.length > 0 && (
             <button
               onClick={handleFinalAction}
               className="rounded-xl bg-emerald-500 p-2 font-bold text-white hover:bg-emerald-600"
@@ -99,7 +99,7 @@ const PurchaseDetail = ({
               </svg>
             </button>
           )}
-          {!isEditing && (
+          {!showEditor && (
             <div className="flex gap-2">
               <button
                 onClick={() => setIsEditing(true)}
