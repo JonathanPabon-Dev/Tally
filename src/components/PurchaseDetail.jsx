@@ -60,9 +60,9 @@ const PurchaseDetail = ({
   }, [purchase, items]);
 
   return (
-    <div className="animate-in slide-in-from-right flex flex-col duration-300">
+    <div className="animate-in slide-in-from-right flex flex-col gap-2 p-4 duration-300">
       {/* Header Estilo Midnight Blue */}
-      <header className="rounded-xl p-4">
+      <header className="rounded-xl">
         <div className="mb-4 flex items-center justify-between">
           <button
             onClick={isEditing ? () => setIsEditing(false) : onBack}
@@ -142,7 +142,7 @@ const PurchaseDetail = ({
         <h2 className="text-3xl tracking-wide">${currentTotal.toFixed(2)}</h2>
       </header>
 
-      <div className="mx-auto w-full max-w-md space-y-8 rounded-xl p-4">
+      <div className="mx-auto w-full max-w-md space-y-4 rounded-xl">
         {/* Campo para el Nombre de la Compra */}
         {showEditor && (
           <section className="space-y-2">
@@ -209,7 +209,7 @@ const PurchaseDetail = ({
               : "Itemized Breakdown"}
           </h3>
           <div
-            className={`${showEditor ? "max-h-80" : "max-h-9/12"} space-y-4 overflow-y-auto`}
+            className={`${showEditor ? "max-h-72" : "max-h-9/12"} space-y-3 overflow-y-auto`}
           >
             {displayItems.map((item, idx) => (
               <div
